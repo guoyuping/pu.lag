@@ -20,8 +20,21 @@ class RoleController extends Controller
 				$role = $form->getData();
 				$dm->persist($role);
 				$dm->flush();
+				return $this->redirectToRoute('role_list');
 			}
 		}
 	    return $this->render('PuViewBundle:Admin/User/Role:new.html.twig',['form'=>$form->createView()]);
+	}
+	public function listAction(Request $request)
+	{
+		$dm = $this->get('doctrine_mongodb')->getManager();
+		$qb = $dm->createQueryBuilder("PuUserBundle:Role");
+		$query = $qb->getQuery();
+		$paginator = $this->get('knp_paginator');
+		$pagination = $paginator->paginate(
+			$query,
+			$request->get('page',1),
+			10);
+		return $this->render('PuViewBundle:Admin/User/Role:list.html.twig',['pagination'=>$pagination]);
 	}
 }

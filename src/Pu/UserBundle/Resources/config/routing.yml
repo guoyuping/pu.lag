@@ -10,6 +10,9 @@ login:
 role_new:
     path:     /role/new
     defaults: { _controller: PuUserBundle:Role:new}
+role_list:
+    path:     /role/list
+    defaults: { _controller: PuUserBundle:Role:list}
 login_check:
     path:     /security_check
     defaults: {_controller: PuUserBundle:Login:securityCheck }
