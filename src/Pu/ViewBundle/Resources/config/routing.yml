@@ -1,0 +1,3 @@
+pu_view_homepage:
+    path:     /
+    defaults: { _controller: PuViewBundle:Default:index }

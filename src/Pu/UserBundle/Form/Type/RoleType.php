@@ -14,9 +14,20 @@ class RoleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name',TextType::class)
-        		->add('role',TextType::class)
-        		;
+        $builder->add('name',TextType::class,[
+                'label'=>'名称',
+                'attr'=>array(
+                    'class'=>'form-400'
+                    )
+            ])
+    		->add('role',TextType::class,[
+                'label'=>'权限',
+                'attr'=>array(
+                    'class'=>'form-400'
+                    )
+
+            ])
+    		;
     }
 
     /**

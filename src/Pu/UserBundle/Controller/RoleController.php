@@ -20,9 +20,8 @@ class RoleController extends Controller
 				$role = $form->getData();
 				$dm->persist($role);
 				$dm->flush();
-
 			}
 		}
-	    return $this->render('PuUserBundle:Role:new.html.twig',['form'=>$form->createView()]);
+	    return $this->render('PuViewBundle:Admin/User/Role:new.html.twig',['form'=>$form->createView()]);
 	}
 }

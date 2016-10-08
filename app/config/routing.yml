@@ -1,3 +1,7 @@
+pu_view:
+    resource: "@PuViewBundle/Resources/config/routing.yml"
+    prefix:   /
+
 pu_search:
     resource: "@PuSearchBundle/Resources/config/routing.yml"
     prefix:   /

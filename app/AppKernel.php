@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Pu\ClientBundle\PuClientBundle(),
             new Pu\AdminBundle\PuAdminBundle(),
             new Pu\SearchBundle\PuSearchBundle(),
+            new Pu\ViewBundle\PuViewBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
