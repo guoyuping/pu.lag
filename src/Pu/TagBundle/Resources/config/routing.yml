@@ -1,0 +1,3 @@
+pu_tag_homepage:
+    path:     /
+    defaults: { _controller: PuTagBundle:Default:index }

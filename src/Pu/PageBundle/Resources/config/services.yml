@@ -1,0 +1,4 @@
+services:
+#    pu_page.example:
+#        class: Pu\PageBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

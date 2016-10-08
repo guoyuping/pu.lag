@@ -1,0 +1,3 @@
+pu_mod_homepage:
+    path:     /
+    defaults: { _controller: PuModBundle:Default:index }

@@ -1,0 +1,15 @@
+pu_user_homepage:
+    path:     /
+    defaults: { _controller: PuUserBundle:Default:index }
+registration:
+    path:     /register
+    defaults: { _controller: PuUserBundle:Account:register}
+login:
+    path:     /login
+    defaults: { _controller: PuUserBundle:Login:login}
+role_new:
+    path:     /role/new
+    defaults: { _controller: PuUserBundle:Role:new}
+login_check:
+    path:     /security_check
+    defaults: {_controller: PuUserBundle:Login:securityCheck }

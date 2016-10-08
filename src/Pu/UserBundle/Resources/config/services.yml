@@ -1,0 +1,4 @@
+services:
+#    pu_user.example:
+#        class: Pu\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

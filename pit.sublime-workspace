@@ -1,0 +1,561 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"D",
+				"DocumentType"
+			],
+			[
+				"Us",
+				"UserType"
+			],
+			[
+				"R",
+				"RegistrationType"
+			],
+			[
+				"sf",
+				"sfform\tSymfony2 / Controller / Form Type"
+			],
+			[
+				"Role",
+				"RoleInterface"
+			],
+			[
+				"user",
+				"username"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/Pu/UserBundle/Document/User.php",
+			"settings":
+			{
+				"buffer_size": 4719,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/config/security.yml",
+			"settings":
+			{
+				"buffer_size": 1729,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Pu/UserBundle/Controller/AccountController.php",
+			"settings":
+			{
+				"buffer_size": 1069,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Pu/UserBundle/Controller/LoginController.php",
+			"settings":
+			{
+				"buffer_size": 6801,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Pu/UserBundle/Resources/views/Login/login.html.twig",
+			"settings":
+			{
+				"buffer_size": 2963,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Pu/UserBundle/Resources/config/routing.yml",
+			"settings":
+			{
+				"buffer_size": 464,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/config/routing.yml",
+			"settings":
+			{
+				"buffer_size": 930,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pci",
+		"selected_items":
+		[
+			[
+				"pci",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/XamppServer/htdocs/s3.1/pu.lag",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/app",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/app/config",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/AdminBundle",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/AdminBundle/Resources",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/AdminBundle/Resources/config",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/ApiBundle/Resources",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/ApiBundle/Resources/config",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Controller",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Document",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Form",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Form/Type",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Resources",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Resources/config",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Resources/views",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/common/lib",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb/lib",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb/lib/Doctrine",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb/lib/Doctrine/MongoDB",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb-odm/lib/Doctrine",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb-odm/lib/Doctrine/ODM",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb-odm/lib/Doctrine/ODM/MongoDB",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb-odm-bundle",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb-odm-bundle/Form",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb-odm-bundle/Form/Type",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/symfony/symfony",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/symfony/symfony/src",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/symfony/symfony/src/Symfony",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/symfony/symfony/src/Symfony/Bundle"
+	],
+	"file_history":
+	[
+		"/D/XamppServer/htdocs/s3.1/pu.lag/app/config/config.yml",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Document/Role.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Controller/AccountController.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Form/Type/RegistrationType.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Form/Model/Registration.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Form/Type/RoleType.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Form/Type/UserType.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Authentication/Token/UsernamePasswordToken.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Encoder/UserPasswordEncoder.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/AdminBundle/Resources/config/routing.yml",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Resources/config/routing.yml",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Resources/views/Role/new.html.twig",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Controller/RoleController.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Resources/views/Account/register.html.twig",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb-odm/lib/Doctrine/ODM/MongoDB/Mapping/Annotations/Field.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/vendor/doctrine/mongodb-odm/lib/Doctrine/ODM/MongoDB/Mapping/Annotations/AbstractField.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/app/AppKernel.php",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/AdminBundle/Resources/config/services.yml",
+		"/D/XamppServer/htdocs/s3.1/pu.lag/app/config/services.yml",
+		"/D/XamppServer/htdocs/s3.1/pit.lag/app/AppKernel.php",
+		"/D/XamppServer/htdocs/s3.1/pit.lag/app/config/config.yml",
+		"/D/MongoDB/Server/3.2/mongod.cfg",
+		"/C/xampp/htdocs/s3.0/s3.1/composer.json",
+		"/C/xampp/apache/conf/extra/httpd-vhosts.conf",
+		"/C/Users/n.cle/AppData/Local/MongoDBCompass/Update.exe"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\XamppServer\\htdocs\\s3.1\\pu.lag",
+			"D:\\XamppServer\\htdocs\\s3.1\\pu.lag\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"identity",
+			"locale",
+			"form",
+			"<?",
+			"UserType",
+			"mongo"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/Pu/UserBundle/Document/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4719,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3077,
+								3077
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"open_with_edit": true,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1532.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/config/security.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1729,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								556,
+								556
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/Pu/UserBundle/Controller/AccountController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								954,
+								954
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/Pu/UserBundle/Controller/LoginController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/Pu/UserBundle/Resources/views/Login/login.html.twig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2963,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1893,
+								1893
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP-Twig/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/Pu/UserBundle/Resources/config/routing.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								196,
+								196
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/config/routing.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								514,
+								514
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "pit.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 265.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
