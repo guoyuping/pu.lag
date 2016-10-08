@@ -1,0 +1,48 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+
+    encoders:
+        Pu\UserBundle\Document\User:
+            #id: app.password_encode
+            algorithm: bcrypt
+            cost: 12
+
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    # providers:
+    #     in_memory:
+    #         memory: ~
+    providers:
+        admin_provider:
+            entity:
+                class: PuUserBundle:User
+                property: username
+                # if you're using multiple entity managers
+                # manager_name: customer
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        admin_login:
+            pattern:  ^/%admin_path%/login$
+            security: false
+        admin:
+            pattern: ^/%admin_path%/
+            form_login:
+                check_path: login_check
+                login_path: /%admin_path%/login
+                #success_handler: authentication_handler
+                #failure_handler: authentication_handler
+                #default_target_path: lag_bundles_admin_dashboard_homepage
+            logout:
+                path:   /%admin_path%/logout
+                target: /%admin_path%/login
+            # activate different ways to authenticate
+
+            # http_basic: ~
+            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html

@@ -1,0 +1,44 @@
+pu_search:
+    resource: "@PuSearchBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pu_admin:
+    resource: "@PuAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pu_client:
+    resource: "@PuClientBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pu_page:
+    resource: "@PuPageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pu_tag:
+    resource: "@PuTagBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pu_content:
+    resource: "@PuContentBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pu_mod:
+    resource: "@PuModBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pu_api:
+    resource: "@PuApiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+pu_user:
+    resource: "@PuUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pu_core:
+    resource: "@PuCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
