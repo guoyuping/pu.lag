@@ -1,3 +1,4 @@
+#
 # Email spool folder
 /app/spool/*
 
