@@ -16,20 +16,21 @@ class UserType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add("username",TextType::class)
+        $builder->add("username",TextType::class,[
+                'label'=>false,
+                'attr'=>array('placeholder'=>"用户名/邮箱")
+
+            ])
         	->add("password",RepeatedType::class,array(
         		'first_name'=>"password",
         		'second_name'=>'confirm',
+                'options'=>array('label'=>false),
+                'first_options'=>array('attr'=>array('placeholder'=>"请输入密码")),
+
+                'second_options'=>array('attr'=>array('placeholder'=>"再次输入密码")),
         		'type'=>PasswordType::class
         	))
-    	// ->add('roles', DocumentType::class,[
-         //        'class'=>'PuUserBundle:Role',
-         //        'choice_label'=>'name',
-         //        'expanded'=>true,
-         //        'multiple'=>true,
-         //        'required'=>false
-              
-         //    ])
+
         	;
 
     }
@@ -52,3 +53,4 @@ class UserType extends AbstractType
         return 'user';
     }
 }
+

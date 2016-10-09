@@ -1,2 +1,8 @@
 body{font-family: "microsoft YaHei",Arial}
+.form-100{ width: 50px; }
+.form-200{ width: 200px; }
 .form-400{ width: 400px; }
+
+.show-left-grid {
+    border-left: 1px solid #eee;
+}

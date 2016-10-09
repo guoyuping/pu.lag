@@ -4,6 +4,15 @@ pu_user_homepage:
 registration:
     path:     /register
     defaults: { _controller: PuUserBundle:Account:register}
+user_new:
+    path:     /%admin_path%/user/new
+    defaults: { _controller: PuUserBundle:Account:new}
+user_edit:
+    path:     /%admin_path%/user/edit
+    defaults: { _controller: PuUserBundle:Account:edit}
+user_list:
+    path:     /%admin_path%/user/list
+    defaults: { _controller: PuUserBundle:Account:list}
 login:
     path:     /login
     defaults: { _controller: PuUserBundle:Login:login}

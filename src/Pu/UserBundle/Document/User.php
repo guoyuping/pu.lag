@@ -8,7 +8,6 @@ use Doctrine\Bundle\MongoDBBundle\Validator\Constraints\Unique as MongoDBUnique;
 
 /**
  * @MongoDB\Document(collection="users")
- * @MongoDBUnique(fields="email")
  */
 class User implements AdvancedUserInterface, \serializable
 {
@@ -42,6 +41,16 @@ class User implements AdvancedUserInterface, \serializable
      * @MongoDB\Field(type="timestamp")
      */
     protected $createdAt;
+    /**
+     * @MongoDB\Field(type="timestamp")
+     */
+    protected $updatedAt;
+
+    public function __construct()
+    {
+        $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->createdAt = new \MongoTimestamp();
+    }
 
     /**
      * @inheritDoc
@@ -131,10 +140,7 @@ class User implements AdvancedUserInterface, \serializable
         return $this->isActive;
     }
 
-    public function __construct()
-    {
-        $this->roles = new \Doctrine\Common\Collections\ArrayCollection();
-    }
+    
     
     /**
      * Get id

@@ -14,17 +14,19 @@
     <!-- Note that the .navbar-collapse and .collapse classes have been removed from the #navbar -->
     <div id="navbar"{#  class="navbar-collapse collapse" #}>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li>
+        {% set route = app.request.attributes.get('_route') %}
+        <li 
+        {% if route=="role_list" or route=="role_new" or route=="user_new" %}class="active"{% endif %}>
             <a id="drop0" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="fa fa-user"></span> 用户
                 <span class="caret"></span>
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="drop0">
-              <li><a href=""><span class="fa fa-list-alt"></span> 用户列表</a></li>
+              <li><a href="{{path('user_list')}}"><span class="fa fa-list-alt"></span> 用户列表</a></li>
               <li><a href="{{path('role_list')}}"><span class="fa fa-lock"></span> 权限管理</a></li>
             </ul>
         </li>

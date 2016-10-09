@@ -13,11 +13,16 @@ class RegistrationType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('user',UserType::class)
-        		->add('terms',CheckboxType::class,array(
-        			'property_path' => 'termsAccepted',
-        			'required'=>false
-        			));
+        $builder->add('user',UserType::class,array(
+                'label'=>'用户注册',
+                'label_attr'=>array('class'=>'title')
+            ))
+    		->add('terms',CheckboxType::class,array(
+    			'property_path' => 'termsAccepted',
+    			'required'=>false,
+                'label'=>'同意用户协议',
+                'data'=>true
+			));
     }
 
 

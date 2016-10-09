@@ -38,7 +38,7 @@ class LoginController extends Controller
         $lastUsername = (null === $session) ? '' : $session->get(Security::LAST_USERNAME);
 
         return $this->render(
-            'PuUserBundle:Login:login.html.twig',
+            'PuViewBundle:Front/User/Login:login.html.twig',
             array(
                 // last username entered by the user
                 'last_username' => $lastUsername,
@@ -71,7 +71,7 @@ class LoginController extends Controller
             }else{
                 $error = new \Symfony\Component\Form\FormError('用户不存在！');
                 return $this->render(
-                    'LagBundlesAdminBaseBundle:Login:login.html.twig',
+                    'PuViewBundle:Front/User/Login:login.html.twig',
                     array(
                         // last username entered by the user
                         'last_username' => $lastUsername,
@@ -93,7 +93,7 @@ class LoginController extends Controller
             {
                 $error = new \Symfony\Component\Form\FormError('用户名或密码错误！');
                 return $this->render(
-                    'LagBundlesAdminBaseBundle:Login:login.html.twig',
+                    'PuViewBundle:Front/User/Login:login.html.twig',
                     array(
                         // last username entered by the user
                         'last_username' => $lastUsername,
@@ -116,7 +116,7 @@ class LoginController extends Controller
             $response->headers->set( 'Content-Type', 'application/json' );
             return $response;
         }
-        return $this->redirectToRoute('lag_bundles_admin_dashboard_homepage');
+        return $this->redirectToRoute('admin_home');
     }
     /**
      * 检查密码

@@ -14,7 +14,7 @@ security:
     #         memory: ~
     providers:
         admin_provider:
-            entity:
+            mongodb:
                 class: PuUserBundle:User
                 property: username
                 # if you're using multiple entity managers
@@ -29,10 +29,10 @@ security:
             pattern:  ^/%admin_path%/login$
             security: false
         admin:
-            pattern: ^/%admin_path%/
+            pattern: ^/%admin_path%
             form_login:
                 check_path: login_check
-                login_path: /%admin_path%/login
+                login_path: login
                 #success_handler: authentication_handler
                 #failure_handler: authentication_handler
                 #default_target_path: lag_bundles_admin_dashboard_homepage
@@ -46,3 +46,6 @@ security:
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+    access_control:
+        - { path: ^/%admin_path%, roles: ROLE_ADMIN }
+        - { path: ^/%user_path%, roles: ROLE_USER }
