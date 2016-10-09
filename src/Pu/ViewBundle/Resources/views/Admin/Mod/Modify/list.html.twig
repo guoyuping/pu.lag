@@ -1,0 +1,31 @@
+{% extends "PuViewBundle::Admin/base.html.twig" %}
+{% block title %}模块管理{% endblock %}
+{% block main %}
+	<ol class="breadcrumb">
+		<li>模块管理</li>
+		<li class="active">模块列表</li>
+	</ol>
+	<div class="filter-tag panel panel-default">
+		<div class="panel-heading"><span class="fa fa-list"></span> 模块管理<a class="btn btn-default btn-xs pull-right" href="{{path('mod_new')}}"><span class="fa fa-plus" aria-hidden="true" ></span> 添加模块</a></div>
+		<table class="table table-hover table-bordered">
+			<tr>
+				<th>名称</th>
+				<th>类型</th>
+				<th>参数</th>
+				<th>操作</th>
+			</tr>
+			{% for mod in pagination %}
+				<tr>
+					<td>{{mod.name}}</td>
+					<td>{{mod.type}}</td>
+					<td>{% for key,item in mod.param %}{{key~item}},{% endfor %}</td>
+					<td><a href="{{path('mod_edit',{'id':mod.id})}}"><i class="fa fa.edit"></i>修改</a></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<div class="pull-right">
+    {{ knp_pagination_render(pagination) }}
+    </div>
+
+{% endblock %}
