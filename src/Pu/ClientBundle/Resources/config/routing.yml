@@ -1,3 +1,0 @@
-pu_client_homepage:
-    path:     /
-    defaults: { _controller: PuClientBundle:Default:index }

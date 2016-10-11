@@ -1,3 +1,0 @@
-pu_core_homepage:
-    path:     /
-    defaults: { _controller: PuCoreBundle:Default:index }

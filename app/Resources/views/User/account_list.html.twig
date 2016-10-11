@@ -1,0 +1,31 @@
+{% extends "Backend/base.html.twig" %}
+{% block title %}用户管理{% endblock %}
+{% block main %}
+	<ol class="breadcrumb">
+		<li class=""><a href="{{path('user_list')}}">用户管理</a></li>
+		<li class="active">用户列表</li>
+	</ol>
+	<div class="filter-tag panel panel-default">
+		<div class="panel-heading"><span class="fa fa-list"></span> 用户列表<small>(共{{ pagination.getTotalItemCount }}条记录)</small><a class="btn btn-default btn-xs pull-right" href="{{path('user_new')}}"><span class="fa fa-plus" aria-hidden="true" ></span> 新建用户</a></div>
+		<table class="table table-hover table-bordered">
+			<tr>
+				<th>用户名</th>
+				<th>权限</th>
+				<th>注册日期</th>
+				<th>操作</th>
+			</tr>
+			{% for user in pagination %}
+				<tr>
+					<td>{{user.username}}</td>
+					<td>{% for role in user.roles %}{{role.name}} {% endfor %}</td>
+					<td>{{user.createdAt}}</td>
+					<td><a href="{{path('user_edit',{'id':user.id})}}"><i class="fa fa.edit"></i>修改</a></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<div class="pull-right">
+    {{ knp_pagination_render(pagination) }}
+    </div>
+
+{% endblock %}

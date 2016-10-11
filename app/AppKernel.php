@@ -17,17 +17,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
-            new Pu\CoreBundle\PuCoreBundle(),
-            new Pu\UserBundle\PuUserBundle(),
-            new Pu\ApiBundle\PuApiBundle(),
-            new Pu\ModBundle\PuModBundle(),
-            new Pu\ContentBundle\PuContentBundle(),
-            new Pu\TagBundle\PuTagBundle(),
-            new Pu\PageBundle\PuPageBundle(),
-            new Pu\ClientBundle\PuClientBundle(),
-            new Pu\AdminBundle\PuAdminBundle(),
-            new Pu\SearchBundle\PuSearchBundle(),
-            new Pu\ViewBundle\PuViewBundle(),
+            new Modset\MoPicOneBundle\ModsetMoPicOneBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

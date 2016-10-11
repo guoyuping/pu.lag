@@ -1,4 +1,0 @@
-services:
-#    pu_view.example:
-#        class: Pu\ViewBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]

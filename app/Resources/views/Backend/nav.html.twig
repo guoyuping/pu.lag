@@ -1,0 +1,47 @@
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <!-- The mobile navbar-toggle button can be safely removed since you do not need it in a non-responsive implementation -->
+      {# <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> #}
+      <a class="navbar-brand" href="#">Pu.lag</a>
+    </div>
+    <!-- Note that the .navbar-collapse and .collapse classes have been removed from the #navbar -->
+    <div id="navbar"{#  class="navbar-collapse collapse" #}>
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="{{path('mod_list')}}"><i class="fa fa-puzzle-piece"></i> 模块</a></li>
+        {% set route = app.request.attributes.get('_route') %}
+        <li 
+        {% if route=="role_list" or route=="role_new" or route=="user_new" %}class="active"{% endif %}>
+            <a id="drop0" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="fa fa-user"></span> 用户
+                <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="drop0">
+              <li><a href="{{path('user_list')}}"><span class="fa fa-list-alt"></span> 用户列表</a></li>
+              <li><a href="{{path('role_list')}}"><span class="fa fa-lock"></span> 权限管理</a></li>
+            </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

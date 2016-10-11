@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"v",
+				"$value〔variable〕"
+			],
+			[
+				"imp",
+				"implode〔function〕"
+			],
+			[
+				"exp",
+				"explode〔function〕"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"json",
+				"json_encode〔function〕"
+			],
+			[
 				"arra",
 				"array"
 			],
@@ -36,29 +56,27 @@
 	"buffers":
 	[
 		{
-			"file": "src/Pu/ViewBundle/Resources/views/Admin/User/Role/new.html.twig",
+			"file": "app/Resources/views/Backend/index.html.twig",
 			"settings":
 			{
-				"buffer_size": 924,
+				"buffer_size": 128,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Pu/ViewBundle/Resources/views/Admin/base.html.twig",
+			"file": "app/config/config.yml",
 			"settings":
 			{
-				"buffer_size": 2178,
-				"encoding": "UTF-8",
+				"buffer_size": 3243,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "web/css/admin.css",
+			"file": "app/config/routing.yml",
 			"settings":
 			{
-				"buffer_size": 69,
-				"encoding": "UTF-8",
+				"buffer_size": 1435,
 				"line_ending": "Windows"
 			}
 		},
@@ -66,25 +84,60 @@
 			"file": "app/AppKernel.php",
 			"settings":
 			{
-				"buffer_size": 2270,
+				"buffer_size": 1793,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/ModBundle/Controller/ModSingleImageController.php",
+			"settings":
+			{
+				"buffer_size": 269,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Resources/views/User/login.html.twig",
+			"settings":
+			{
+				"buffer_size": 2976,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Pu/UserBundle/Controller/RoleController.php",
+			"file": "src/AppBundle/Form/Type/ModType.php",
 			"settings":
 			{
-				"buffer_size": 1225,
+				"buffer_size": 1596,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Pu/ViewBundle/Resources/views/Admin/User/Role/list.html.twig",
+			"file": "app/Resources/views/Backend/nav.html.twig",
 			"settings":
 			{
-				"buffer_size": 783,
+				"buffer_size": 2257,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/AppBundle/Controller/Mod/ModController.php",
+			"settings":
+			{
+				"buffer_size": 2854,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/AppBundle/Form/Type/MoudleType.php",
+			"settings":
+			{
+				"buffer_size": 956,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -103,7 +156,7 @@
 		[
 			[
 				"pci",
-				"Package Control: Disable Package"
+				"Package Control: List Packages"
 			]
 		],
 		"width": 528.0
@@ -131,39 +184,95 @@
 		"/D/XamppServer/htdocs/lag/pu.lag/app",
 		"/D/XamppServer/htdocs/lag/pu.lag/app/config",
 		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views",
 		"/D/XamppServer/htdocs/lag/pu.lag/src",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Controller",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Resources",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Resources/config",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/User",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/User/Role",
-		"/D/XamppServer/htdocs/lag/pu.lag/web"
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/User",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/ModBundle",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/ModBundle/Controller",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/ModBundle/Resources",
+		"/D/XamppServer/htdocs/lag/pu.lag/web/css"
 	],
 	"file_history":
 	[
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/nav.html.twig",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Resources/config/routing.yml",
-		"/D/XamppServer/htdocs/lag/pu.lag/app/config/config.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/config/routing.yml",
 		"/D/XamppServer/htdocs/lag/pu.lag/app/AppKernel.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Form/Model/Moudle.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Document/Mod.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/User/LoginController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/User/register.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Resources/config/routing.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/User/role_new.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/Mod/ModController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/config/security.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/User/role_list.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/User/account_list.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/Mod/list.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/Mod/new.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/Frontend/index.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/HomeController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/vendor/symfony/symfony/src/Symfony/Component/Security/Core/User/UserChecker.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/User/AccountController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/IndexController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/User/RoleController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/User/admin_login.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Form/Type/AdminType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Form/Type/RegistrationType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Form/Type/RoleType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Form/Model/Registration.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Document/User.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Document/Role.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Form/Type/UserType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/User/DefaultController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/Backend/base.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/config/config.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/User/account_form.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/Frontend/User/Account/register.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/User/login.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/AdminBundle/Resources/config/routing.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/Resources/views/Admin/Index/index.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/AppBundle/Controller/DefaultController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Controller/ModController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Resources/config/routing.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Modset/PuModSingleImage/View/index.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Resources/config/config.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Controller/DefaultController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/DependencyInjection/PuModExtension.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Resources/config/services.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/DependencyInjection/Configuration.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Document/Mod.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Modset/PuModSingleImage/Controller/DefaultController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Document/User.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/web/css/admin.css",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Form/Model/Moudle.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Form/Type/MoudleType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/TwigEngine.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/vendor/symfony/symfony/src/Symfony/Bridge/Twig/TwigEngine.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/vendor/symfony/symfony/src/Symfony/Component/Finder/Finder.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/DependencyInjection/TwigExtension.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/web/js/html5-file-upload/index.htm",
+		"/D/XamppServer/htdocs/lag/pu.lag/app/config/parameters.yml",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Controller/LoginController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/User/Role/list.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ModBundle/Form/Type/ModType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Controller/AccountController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/User/Account/list.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Form/Type/RegistrationType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/web/js/html5-file-upload/upload.json.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/User/Role/new.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Front/blank.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/AdminBundle/Controller/HomepageController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Form/Type/AdminType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Form/Type/UserType.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Controller/RoleController.php",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Front/User/Account/register.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/base.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Resources/views/blank.html.twig",
+		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/nav.html.twig",
 		"/D/XamppServer/htdocs/lag/pu.lag/vendor/composer/autoload_namespaces.php",
 		"/D/XamppServer/apache/conf/extra/httpd-vhosts.conf",
 		"/D/XamppServer/htdocs/lag/pu.lag/composer.json",
-		"/D/XamppServer/htdocs/lag/pu.lag/app/config/routing.yml",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Controller/LoginController.php",
 		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Resources/views/Login/login.html.twig",
 		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Form/Type/RoleType.php",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Controller/RoleController.php",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Document/User.php",
-		"/D/XamppServer/htdocs/lag/pu.lag/app/config/security.yml",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/UserBundle/Controller/AccountController.php",
-		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Resources/views/Admin/base.html.twig",
-		"/D/XamppServer/htdocs/lag/pu.lag/web/css/admin.css",
 		"/D/XamppServer/htdocs/lag/pu.lag/src/Pu/ViewBundle/Controller/DefaultController.php",
 		"/D/XamppServer/htdocs/s3.1/pu.lag/app/config/config.yml",
 		"/D/XamppServer/htdocs/s3.1/pu.lag/src/Pu/UserBundle/Document/Role.php",
@@ -200,6 +309,17 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\src\\AppBundle",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\app",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\app\\Resources\\views",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\src\\AppBundle",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\app\\Resources\\views",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\app",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\src\\AppBundle",
+			"AppBundle",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\src",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\src\\Pu\\ModBundle",
+			"D:\\XamppServer\\htdocs\\lag\\pu.lag\\src",
 			"D:\\XamppServer\\htdocs\\lag\\pu.lag",
 			"D:\\XamppServer\\htdocs\\s3.1\\pu.lag",
 			"D:\\XamppServer\\htdocs\\s3.1\\pu.lag\\src"
@@ -210,6 +330,24 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"PuModBundle",
+			"ModBundle",
+			"Pu\\ModBundle",
+			"Pu",
+			"PuViewBundle:Admin/Mod/Modify:",
+			"Pu\\ModBundle",
+			"PuViewBundle::",
+			"PuViewBundle::Admin",
+			"PuViewBundle",
+			"PuUserBundle",
+			"Pu\\UserBundle",
+			"PuUserBundle",
+			"Pu\\UserBundle\n",
+			";\n",
+			"UserBundle",
+			"admin_new",
+			"LagBundlesAdminBaseBundle",
+			"lag_bundles_admin_dashboard_homepage",
 			"knp",
 			"Knp\\Bundle\\PaginatorBundle",
 			"identity",
@@ -225,6 +363,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"AppBundle",
+			"Mod/",
+			"AppBundle",
+			"Backend",
+			"AppBundle",
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -235,24 +379,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/Pu/ViewBundle/Resources/views/Admin/User/Role/new.html.twig",
+					"file": "app/Resources/views/Backend/index.html.twig",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 924,
+						"buffer_size": 128,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								449,
-								449
+								128,
+								128
 							]
 						],
 						"settings":
@@ -261,73 +405,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP-Twig/Syntaxes/HTML (Twig).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/Pu/ViewBundle/Resources/views/Admin/base.html.twig",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2178,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								334,
-								334
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP-Twig/Syntaxes/HTML (Twig).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "web/css/admin.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 69,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								69,
-								69
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"syntax": "Packages/PHP-Twig/Syntaxes/HTML (Twig).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -337,29 +415,28 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/AppKernel.php",
+					"buffer": 1,
+					"file": "app/config/config.yml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2270,
+						"buffer_size": 3243,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								837,
-								837
+								954,
+								954
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -371,20 +448,221 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/Pu/UserBundle/Controller/RoleController.php",
+					"buffer": 2,
+					"file": "app/config/routing.yml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1225,
+						"buffer_size": 1435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								688,
-								688
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/AppKernel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								838,
+								838
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/ModBundle/Controller/ModSingleImageController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 269,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								188,
+								188
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Resources/views/User/login.html.twig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20,
+								20
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP-Twig/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/AppBundle/Form/Type/ModType.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								141,
+								141
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/Resources/views/Backend/nav.html.twig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								746,
+								747
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP-Twig/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/AppBundle/Controller/Mod/ModController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1580,
+								1580
 							]
 						],
 						"settings":
@@ -397,44 +675,44 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 495.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/Pu/ViewBundle/Resources/views/Admin/User/Role/list.html.twig",
+					"buffer": 9,
+					"file": "src/AppBundle/Form/Type/MoudleType.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 783,
+						"buffer_size": 956,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								369,
-								369
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"incomplete_sync": null,
-							"open_with_edit": true,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/PHP-Twig/Syntaxes/HTML (Twig).tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -483,7 +761,7 @@
 	"project": "pit.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

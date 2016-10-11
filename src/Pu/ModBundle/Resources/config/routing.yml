@@ -1,9 +1,0 @@
-mod_new:
-    path:     /%admin_path%/mod/new
-    defaults: { _controller: PuModBundle:Mod:new }
-mod_edit:
-    path:     /%admin_path%/mod/edit
-    defaults: { _controller: PuModBundle:Mod:edit }
-mod_list:
-    path:     /%admin_path%/mod/list
-    defaults: { _controller: PuModBundle:Mod:list }

@@ -1,3 +1,0 @@
-admin_home:
-    path:     /admin
-    defaults: { _controller: PuAdminBundle:Homepage:home }

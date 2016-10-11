@@ -1,3 +1,0 @@
-pu_page_homepage:
-    path:     /
-    defaults: { _controller: PuPageBundle:Default:index }

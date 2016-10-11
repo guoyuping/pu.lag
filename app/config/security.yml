@@ -3,7 +3,7 @@
 security:
 
     encoders:
-        Pu\UserBundle\Document\User:
+        AppBundle\Document\User:
             #id: app.password_encode
             algorithm: bcrypt
             cost: 12
@@ -15,7 +15,7 @@ security:
     providers:
         admin_provider:
             mongodb:
-                class: PuUserBundle:User
+                class: AppBundle:User
                 property: username
                 # if you're using multiple entity managers
                 # manager_name: customer

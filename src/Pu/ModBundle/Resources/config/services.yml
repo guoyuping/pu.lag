@@ -1,4 +1,0 @@
-services:
-#    pu_mod.example:
-#        class: Pu\ModBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]

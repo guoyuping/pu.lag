@@ -1,0 +1,6 @@
+<script type="text/javascript" src="{{asset('js/test.js')}}"></script>
+
+{% javascripts '@ModsetMoPicOneBundle/Resources/public/js/*' %}
+    <script src="{{ asset('js/test.js') }}"></script>
+{% endjavascripts %}
+{{render(controller('Modset'~name~'Bundle:Mod:render'))}}

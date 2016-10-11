@@ -1,0 +1,3 @@
+modset_mo_pic_one_homepage:
+    path:     /
+    defaults: { _controller: ModsetMoPicOneBundle:Default:index }

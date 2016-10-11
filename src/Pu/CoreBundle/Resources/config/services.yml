@@ -1,4 +1,0 @@
-services:
-#    pu_core.example:
-#        class: Pu\CoreBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
