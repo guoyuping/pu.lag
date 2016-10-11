@@ -18,7 +18,7 @@
         "symfony/http-kernel": "~2.3|~3.0",
         "symfony/class-loader": "~2.3|~3.0",
         "symfony/process": "~2.3|~3.0",
-        "sensiolabs/security-checker": "~3.0"
+        "sensiolabs/security-checker": "~3.0|~4.0"
     },
     "autoload": {
         "psr-4": { "Sensio\\Bundle\\DistributionBundle\\": "" }
@@ -28,8 +28,5 @@
             "dev-master": "5.0.x-dev"
         }
     },
-    "post-install-cmd": [
-        "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
-    ],
     "minimum-stability": "dev"
 }

@@ -91,8 +91,8 @@ knp_paginator:
     template:
         pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig    # sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
-assetic:
-    debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
-    filters:
-        cssrewrite: ~
+# assetic:
+#     debug:          '%kernel.debug%'
+#     use_controller: '%kernel.debug%'
+#     filters:
+#         cssrewrite: ~
