@@ -30,7 +30,8 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "doctrine/mongodb-odm": "~1.0",
         "doctrine/mongodb-odm-bundle": "~3.0",
-        "knplabs/knp-paginator-bundle": "^2.5"
+        "knplabs/knp-paginator-bundle": "^2.5",
+        "symfony/assetic-bundle": "^2.8"
 
     },
     "require-dev": {
