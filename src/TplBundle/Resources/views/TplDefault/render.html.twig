@@ -1,0 +1,53 @@
+{% extends 'Frontend/blank.html.twig' %}
+{% block body %}
+	<div class="container-fluid tpl">
+		<div class="row">
+			<div class="tpl_default">
+				{{render(controller('MoBundle:ModDefault:render'))}}
+			</div>
+		</div>
+	</div>
+	<style type="text/css">
+		.tpl { max-width: 700px; margin: 20px auto;}
+		.mod-body { margin-bottom: 15px; }
+		.mod-form button.close{ 
+		  padding:0; 
+		  margin: 0px 13px 0 0;
+		}
+	</style>
+	
+	
+	<script type="text/javascript">
+		$(function () {
+			$('.mod-default-render .mod-body').on('click', function(event) 
+			{
+				event.preventDefault();
+				$('.mod-default-form').modal({ 
+					backdrop: 'static', 
+					keyboard: false 
+				});
+			});
+			// 
+
+			$('.insert-image').on('click', function(event) {
+				event.preventDefault();
+				/* Act on the event */
+
+				//alert(h.html())
+				$('.mod-default-render').before($('.box .mod-pic-one-render').clone(true));
+				$('.mod-default-form').modal('hide');
+				$('.mod-pic-one-form').modal({ backdrop: 'static', keyboard: false });
+				});
+						
+			});
+		var a = "ModPicOne";
+		var b =a.replace(/([A-Z]+)/g,"-$1");
+		var slug =b.toLowerCase().substr(1);
+		
+
+	</script>
+	<div class="box" style="display: none;">
+		{{render(controller('AppBundle:Mod:render',{slug:'ModPicOne',action:'render'}))}}
+	</div>
+	{{ include('TplBundle::TplDefault/forms.html.twig',{mods:mods})}}
+{% endblock %}

@@ -10,18 +10,16 @@
 		<table class="table table-hover table-bordered">
 			<tr>
 				<th>名称</th>
-				<th>唯一索引</th>
 				<th>类型</th>
-				<th>参数</th>
-				<th>操作</th>
+				<th>说明</th>
+				<th class="edit-col-normal">操作</th>
 			</tr>
 			{% for mod in pagination %}
 				<tr>
 					<td>{{mod.name}}</td>
-					<td>{{mod.uniqueName}}</td>
 					<td>{{mod.type}}</td>
-					<td>{% for key,item in mod.param %}{{key~item}},{% endfor %}</td>
-					<td><a href="{{path('mod_edit',{'id':mod.id})}}"><i class="fa fa.edit"></i>修改</a></td>
+					<td>{{mod.description}}</td>
+					<td><a href="{{path('mod_edit',{'id':mod.id})}}"><i class="fa fa-edit"></i>修改</a>&nbsp;<a href="javascript:;"><i class="fa fa-times-circle"></i>删除</a></td>
 				</tr>
 			{% endfor %}
 		</table>

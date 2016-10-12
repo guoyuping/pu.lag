@@ -12,25 +12,19 @@ class Mod
      * @MongoDB\Id()
      */
     protected $id;
-
     /**
      * @MongoDB\Field(type="string")
      */
     protected $name;
-
     /**
-     * Mod标识符
      * @MongoDB\Field(type="string")
-     * @@MongoDB\UniqueIndex(order="asc")
-     * 
      */
-    protected $uniqueName;
+    protected $description;
     /**
      * 参数
      * @MongoDB\Field(type="hash",nullable=true)
      */
     protected $param;
-
     /**
      * 
      * @MongoDB\Field(type="string",nullable=true)
@@ -41,12 +35,6 @@ class Mod
      * @MongoDB\Field(type="int")
      */
     protected $status = 0;
-
-    /**
-     * @MongoDB\Field(type="boolean")
-     */
-    protected $isDeleted = false;
-
 
 
     /**
@@ -147,47 +135,26 @@ class Mod
         return $this->status;
     }
 
+
     /**
-     * Set isDeleted
+     * Set description
      *
-     * @param boolean $isDeleted
+     * @param string $description
      * @return $this
      */
-    public function setIsDeleted($isDeleted)
+    public function setDescription($description)
     {
-        $this->isDeleted = $isDeleted;
+        $this->description = $description;
         return $this;
     }
 
     /**
-     * Get isDeleted
+     * Get description
      *
-     * @return boolean $isDeleted
+     * @return string $description
      */
-    public function getIsDeleted()
+    public function getDescription()
     {
-        return $this->isDeleted;
-    }
-
-    /**
-     * Set uniqueName
-     *
-     * @param string $uniqueName
-     * @return $this
-     */
-    public function setUniqueName($uniqueName)
-    {
-        $this->uniqueName = $uniqueName;
-        return $this;
-    }
-
-    /**
-     * Get uniqueName
-     *
-     * @return string $uniqueName
-     */
-    public function getUniqueName()
-    {
-        return $this->uniqueName;
+        return $this->description;
     }
 }

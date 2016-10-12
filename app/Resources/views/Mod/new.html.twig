@@ -9,19 +9,16 @@
 	<div class="filter-tag panel panel-default">
 		<div class="panel-heading"><span class="fa fa-edit"></span> {% if action == 'new' %}新建模块 {% else %}修改模块{% endif %}</div>
 		<div class="panel-body row">
-			<div class="col-md-8">
-			    {{ form_row(form.mod) }}
+			<div class="col-sm-8 col-md-8">
+			    <label>模块参数(JSON)</label>
+				<pre id="editor"></pre>
 
 			</div>
-			<div class="col-md-4 show-left-grid">
-				<label>设置参数</label>
-				<div class="params" data-prototype="{{ form_widget(form.params.vars.prototype)|e }}">
-
-					{% for param in form.params %}
-			            <div class="form-group form-inline parma">{{ form_widget(param) }}</div>
-						
-			        {% endfor %}
-				</div>
+			<div class="col-sm-4 col-md-4 show-left-grid">
+				{{ form_row(form.name) }}
+				{{ form_row(form.type) }}
+				{{ form_row(form.description) }}
+				{{ form_widget(form.param) }}
 			</div>
 		</div>
 		<div class="panel-footer text-center">
@@ -30,14 +27,29 @@
 	</div>
 	{{form_end(form)}}
 	<style type="text/css">
-
+		#editor {
+	        height: 500px;
+	    }
 		.params .form-control { width: 200px; }
 		.params .remove:link{ padding-left: 20px; font-size:18px; color: #999; }
 		.params .remove:hover{color: #666;}
 	</style>
 {% endblock %}
 {% block javascripts %}
-	
+	<script src="{{asset('js/ace-builds/src-min-noconflict/ace.js')}}" type="text/javascript" charset="utf-8"></script>
+	<script>
+	    var editor = ace.edit("editor");
+	    editor.setTheme("ace/theme/twilight");
+	    editor.session.setMode("ace/mode/json");
+	    editor.setDisplayIndentGuides(true);
+	    editor.$blockScrolling = Infinity;
+	    var param = $('#mod_param');
+	    //editor.setShowInvisibles(true);
+	    editor.setValue(param.text()?JSON.stringify(JSON.parse(param.text()), null, 4):"");
+	    $('form').on('submit', function(event) {
+	    	param.text(editor.getValue());
+	    });
+	</script>
 	<script type="text/javascript">
 		var $collectionHolder;
 

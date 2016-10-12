@@ -1,0 +1,58 @@
+<div class="modal fade mod-form mod-pic-one-form">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <div id="dropbox" class="">
+        	<input class="image-upload" type="file">
+        	拖拽图片到阴影区域或点击选择图片文件！
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<style type="text/css">
+
+.mod-form .modal-body{  
+  padding: 0;
+}
+#dropbox{
+	padding: 100px;
+	margin: 10px;
+	border:1px dashed #ccc;
+	border-radius: 6px;
+	background: #eee;
+
+}
+</style>
+<script src="{{asset('js/html5-file-upload/jquery.html5-fileupload.js')}}"></script>
+<script type="text/javascript">
+	$('.image-upload, #dropbox').fileUpload(
+		{
+			url: './upload.json.php',
+			type: 'POST',
+			dataType: 'json',
+			imageMaxHeight: 200,
+			imageMaxWidth: 300,
+			//allowUploadOriginalImage: true,  // Webkit browsers need one of these two settings to work.
+			allowDataInBase64: true,           // (Fallback to original file, or send the resized in base64)
+			forceResize: false,
+			beforeSend: function () {
+				$(document.body).addClass('uploading');
+			},
+			complete: function () {
+				$(document.body).removeClass('uploading');
+			},
+			success: function (result, status, xhr) {
+				if (!result) {
+					window.alert('This is a static demo page hosted on Github; No server response will be given.');
+					return;
+				}
+				if (result.error !== 0) {
+					window.alert(result.error);
+					return;
+				}
+				window.alert('Success! You have sent a file named \'' + result.name + '\' with MIME type \'' + result.type + '\'.');
+			}
+		});
+</script>

@@ -1,0 +1,13 @@
+<div class="mod-render mod-pic-one-render">
+	<div class="wrapper">
+		<div class="mod-body"><img src="holder.js/{{param.width}}x{{param.height}}" alt="" class="img-rounded"></div>
+	</div>
+</div>
+<script src="{{asset('js/imsky-holder-8220898/holder.min.js')}}"></script>
+<script type="text/javascript">
+	$(function () {
+		$('.mod-pic-one-render .mod-body').on('click', function (e) {
+			$('.mod-pic-one-form').modal({ backdrop: 'static', keyboard: false });
+		});
+	});
+</script>

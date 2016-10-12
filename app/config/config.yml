@@ -2,6 +2,8 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@MoBundle/Resources/config/services.yml" }
+    - { resource: "@TplBundle/Resources/config/services.yml" }
     # - { resource: "@ModBundle/Resources/config/services.yml" }
 
     
@@ -91,8 +93,8 @@ knp_paginator:
     template:
         pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig    # sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
-# assetic:
-#     debug:          '%kernel.debug%'
-#     use_controller: '%kernel.debug%'
-#     filters:
-#         cssrewrite: ~
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~

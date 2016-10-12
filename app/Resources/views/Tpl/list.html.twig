@@ -1,0 +1,31 @@
+{% extends "Backend/base.html.twig" %}
+{% block title %}模板管理{% endblock %}
+{% block main %}
+	<ol class="breadcrumb">
+		<li>模板管理</li>
+		<li class="active">模板列表</li>
+	</ol>
+	<div class="filter-tag panel panel-default">
+		<div class="panel-heading"><span class="fa fa-list"></span> 模板管理<a class="btn btn-default btn-xs pull-right" href="{{path('mod_new')}}"><span class="fa fa-plus" aria-hidden="true" ></span> 添加模板</a></div>
+		<table class="table table-hover table-bordered">
+			<tr>
+				<th>名称</th>
+				<th>类型</th>
+				<th>说明</th>
+				<th class="edit-col-normal">操作</th>
+			</tr>
+			{% for tpl in pagination %}
+				<tr>
+					<td>{{tpl.name}}</td>
+					<td>{{tpl.type}}</td>
+					<td>{{tpl.description}}</td>
+					<td><a href="{{path('tpl_edit',{'id':tpl.id})}}"><i class="fa fa-edit"></i>修改</a>&nbsp;<a href="javascript:;"><i class="fa fa-times-circle"></i>删除</a></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<div class="pull-right">
+    {{ knp_pagination_render(pagination) }}
+    </div>
+
+{% endblock %}

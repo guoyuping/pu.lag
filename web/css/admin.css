@@ -6,3 +6,6 @@ body{font-family: "microsoft YaHei",Arial}
 .show-left-grid {
     border-left: 1px solid #eee;
 }
+.edit-col-normal{
+	width: 150px;
+}

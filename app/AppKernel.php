@@ -18,7 +18,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Modset\MoPicOneBundle\ModsetMoPicOneBundle(),
-            //new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new MoBundle\MoBundle(),
+            new TplBundle\TplBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

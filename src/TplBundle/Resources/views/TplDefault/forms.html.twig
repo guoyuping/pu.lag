@@ -1,0 +1,5 @@
+<div class="mod_forms">
+	{% for controller in mods %}
+		{{render(controller('AppBundle:Mod:render',{slug:controller,action:'form'}))}}
+	{% endfor %}
+</div>

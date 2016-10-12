@@ -1,5 +1,8 @@
-{% javascripts '@ModsetMoPicOneBundle/Resources/Public/js/*' %}
+{% extends 'Frontend/blank.html.twig' %}
+
+	{% block body %}
+{{render(controller('Modset'~name~'Bundle:Mod:render',{position:12}))}}
+{% javascripts '@ModsetMoPicOneBundle/Resources/Public/js/test.js' %}
     <script src="{{ asset('test.js') }}"></script>
 {% endjavascripts %}
-
-{{render(controller('Modset'~name~'Bundle:Mod:render'))}}
+	{% endblock %}

@@ -6,7 +6,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 class ModType extends AbstractType
 {
     /**
@@ -17,27 +17,22 @@ class ModType extends AbstractType
         $builder->add("name",TextType::class,
             [
                 'label'=>'模块名',
-                'attr'=>array('class'=>'form-400')
+                'attr'=>array('class'=>'form-200')
             ])
-            // ->add("params",TextType::class,[
-            //     'allow_extra_fields'=>true
-            //     ])
-            
+            ->add("description",TextareaType::class,[
+                'label'=>'说明',
+                'allow_extra_fields'=>true
+            ])
             ->add("type",TextType::class,
             [
                 'label'=>'类型',
-                'attr'=>array('class'=>'form-400')
+                'attr'=>array('class'=>'form-200')
             ])
-            ->add("uniqueName",TextType::class,
+            ->add("param",TextareaType::class,
             [
-                'label'=>'唯一标识符',
-                'attr'=>array('class'=>'form-400')
-            ])
-            ->add("isDeleted",null,
-            [
-                'label'=>'删除',
+                'label'=>false,
+                'attr'=>array('class'=>'hide'),
                 'required'=>false
-
             ])
             ;
 
