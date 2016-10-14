@@ -83,14 +83,35 @@ class ModController extends Controller
 
 	public function renderAction(Request $request)
 	{
+
 		$dm = $this->get('doctrine_mongodb')->getManager();
-		$controller = $request->get('slug');
-		$mod = $dm->getRepository('AppBundle:Mod')->findOneBy(array('param.controller'=>$controller));
-		if (!$mod) {
+		$mod = $request->get('mod');
+		$action = $request->get('action');
+		$param = "";
+		if ($action == "form") {
+			$controller = $mod;
+		}
+		if ($action == "render") {
+			// var_dump(mod)
+			// array:4 [▼
+			//   "controller" => "ModPicOne"
+			//   "width" => 700
+			//   "height" => 200
+			//   "type" => "standalone"
+			// ]
+			$controller = $mod['controller'];
+			$param = $mod;
+		}
+
+
+		if (!$mod || !$action) {
 			throw new \Exception("Error: AppBundle:Mod:render, \"$controller\" 模块不存在！", 1);
 		}
-		$action = $request->get('action');
-		$response = $this->forward("MoBundle:$controller:$action",array('param'=>$mod->getParam()));
+		
+		
+		//$mod = $dm->getRepository('AppBundle:Mod')->findOneBy(array('param.controller'=>$controller));
+
+		$response = $this->forward("MoBundle:$controller:$action",array('param'=>$param));
 		return $response;
 	}
 

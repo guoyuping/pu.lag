@@ -7,6 +7,9 @@
 			</div>
 		</div>
 	</div>
+	{{ include('TplBundle::TplDefault/forms.html.twig',{mods:mods,mixs:mixs})}}
+{% endblock %}
+{% block stylesheets %}
 	<style type="text/css">
 		.tpl { max-width: 700px; margin: 20px auto;}
 		.mod-body { margin-bottom: 15px; }
@@ -15,10 +18,11 @@
 		  margin: 0px 13px 0 0;
 		}
 	</style>
-	
-	
+{% endblock %}
+{% block javascripts %}
 	<script type="text/javascript">
 		$(function () {
+			
 			$('.mod-default-render .mod-body').on('click', function(event) 
 			{
 				event.preventDefault();
@@ -28,7 +32,6 @@
 				});
 			});
 			// 
-
 			$('.insert-image').on('click', function(event) {
 				event.preventDefault();
 				/* Act on the event */
@@ -43,11 +46,5 @@
 		var a = "ModPicOne";
 		var b =a.replace(/([A-Z]+)/g,"-$1");
 		var slug =b.toLowerCase().substr(1);
-		
-
 	</script>
-	<div class="box" style="display: none;">
-		{{render(controller('AppBundle:Mod:render',{slug:'ModPicOne',action:'render'}))}}
-	</div>
-	{{ include('TplBundle::TplDefault/forms.html.twig',{mods:mods})}}
 {% endblock %}

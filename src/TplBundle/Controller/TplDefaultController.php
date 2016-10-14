@@ -10,7 +10,9 @@ class TplDefaultController extends Controller
 {
     public function renderAction(Request $request)
     {
+    	
     	$mods = $request->get('mods');
-        return $this->render('TplBundle:TplDefault:render.html.twig',array('mods'=>$mods));
+    	$mixs = $request->get('mixs');
+        return $this->render('TplBundle:TplDefault:render.html.twig',array('mods'=>$mods,'mixs'=>$mixs));
     }
 }

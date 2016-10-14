@@ -1,5 +1,10 @@
-<div class="mod_forms">
-	{% for controller in mods %}
-		{{render(controller('AppBundle:Mod:render',{slug:controller,action:'form'}))}}
+<div class="mods_form">
+	{% for controler in mods %}
+		{{render(controller('AppBundle:Mod:render',{mod: mod, action: 'form'}))}}
+	{% endfor %}
+</div>
+<div class="mods_pre_render hide">
+	{% for param in mixs %}
+		{{render(controller('AppBundle:Mod:render',{mod: param, action: 'render'}))}}
 	{% endfor %}
 </div>

@@ -11,11 +11,10 @@ tpl:
     defaults: { _controller: AppBundle:Tpl:render}
     requirements:
         id: '\d+'
-mod:
-    path:     /mod/{slug}/{action}
+test_mod:
+    path:     /mod/{mod}/{action}
     defaults: { _controller: AppBundle:Mod:render}
     requirements:
-        slug: '[0-9A-Za-z_-]+'
         action: 'render|form'
 #User
 registration:
