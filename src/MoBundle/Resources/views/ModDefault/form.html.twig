@@ -12,6 +12,7 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
 <script>
 $(function () {
     $('.mod-default-render').on('click', function(event) 
@@ -20,16 +21,29 @@ $(function () {
         //btn.id 是位置
         if (btn.hasClass('mixed')) 
         {
-          
+
+          $.ajax({
+            url: '{{path("tpl_sub_mods")}}',
+            type: 'get',
+            dataType: 'json',
+            data: {id: "{{params.tpl}}", pos: btn.attr('id')}
+          })
+          .done(function(data) {
+            if (data.success) {
+              renderMods(data.data);
+            }
+          })
+          .fail(function() {
+            console.log("error");
+          })
+          .always(function() {
+            console.log("complete");
+          });
           
           //提交 {{params.tpl}} 和 btn.id
           //活动当前点击的mod的子模块
           //遍历子模块动态生成点击列表
 
-          //生成 style class 
-          var a = "{{params.controller}}";
-          var b =a.replace(/([A-Z]+)/g,"-$1");
-          var slug =b.toLowerCase().substr(1);
         }
         event.preventDefault();
         $('.mod-default-form').modal({ 
@@ -38,6 +52,18 @@ $(function () {
         });
       });
 });
+function renderMods(mods) {
+  var a = $('.mod-default-form .list-btn-group');
+  a.html('');
+  for (var key in mods) {
+    var mod = mods[key];
+    $('<a href>').addClass(generateClass(mod.controller)).text(mod.title).appendTo(a);
+  }
+}
+function generateClass(ctrl) {
+  var b =ctrl.replace(/([A-Z]+)/g,"-$1");
+  return b.toLowerCase().substr(1)+"-render";
+}
 </script>
 <style type="text/css">
 .list-btn-group { 

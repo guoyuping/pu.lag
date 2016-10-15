@@ -87,6 +87,7 @@ class ModController extends Controller
 	{
 		$dm = $this->get('doctrine_mongodb')->getManager();
 		$mod = $request->get('mod');
+
 		$action = $request->get('action');
 		if ($action == "form") {
 			/*

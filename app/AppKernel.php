@@ -19,8 +19,10 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Modset\MoPicOneBundle\ModsetMoPicOneBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
             new MoBundle\MoBundle(),
             new TplBundle\TplBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

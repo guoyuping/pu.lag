@@ -34,20 +34,20 @@
         </style>
     </head>
     <body>
-        {{dump(params.tpl)}}
         {% block body %}{% endblock %}
         {% block javascripts %}
             <script type="text/javascript">
-
+             {#tpl = JSON.parse({{ params.tpl | serialize('json') | raw}})#}
             </script>
         {% endblock %}
-{#         <div class="{{tpl_auto_include_renders_class}} hide">
+        {# <div class="{{tpl_auto_include_renders_class}} hide">
             {% for render in params.renders %}
                 {{render(controller('AppBundle:Mod:include',{mod: render, action: 'render'}))}}
             {% endfor %}
         </div> #}
         <div class="{{tpl_auto_include_forms_class}}">
             {% for key,form in params.forms %}
+
                 {% if key != "ModText" %}
                 {{render(controller('AppBundle:Mod:include',{mod: form, action: 'form'}))}}
                 {% endif %}

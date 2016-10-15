@@ -98,9 +98,9 @@ class TplController extends Controller
 
 		//TODO
 		//让每个模块都保护模板信息
+
 		$this->getMods($tid,$mods,$pmods,$forms,$mixed,0);
-		$params = array('tpl'=>json_encode($tpl),'mods'=>$pmods,'forms'=>$forms);
-		print_r($tpl);
+		$params = array('mods'=>$mods,'forms'=>$forms);
 		$response = $this->forward("TplBundle:$controller:render",array('params'=>$params));
 		return $response;
 	}
@@ -129,8 +129,18 @@ class TplController extends Controller
 			}
 		}
 	}
-	// public function getSubModsAction(Request $request)
-	// {
-	// 	$t = $
-	// }
+	public function getSubModsAction(Request $request)
+	{
+		$tid = $request->get('id');
+		$pos = $request->get('pos');
+		$dm = $this->get('doctrine_mongodb')->getManager();
+		$tpl = $dm->getRepository('AppBundle:Tpl')->find($tid);
+		if (!$tpl) {
+			return new Response(json_encode(array('success'=>0,'error'=>'tpl不存在！')));
+		}
+		$param = $tpl->getParam();
+		$mods = $param['mods'];
+		$serializer = $this->container->get('jms_serializer');
+		return new Response($serializer->serialize(array('success'=>1,'data'=>$mods[$pos]['mods']), 'json'));
+	}
 }

@@ -69,9 +69,9 @@ tpl_show:
     defaults: { _controller: AppBundle:Tpl:render }
     requirements:
         id: '[0-9A-Za-z]+'
-# tpl_sub_mods:
-#     path:     /tpl/sub/mods
-#     defaults: { _controller: AppBundle:Tpl:getSubMods }
+tpl_sub_mods:
+    path:     /tpl/sub/mods
+    defaults: { _controller: AppBundle:Tpl:getSubMods }
 #/
 admin_home:
     path:     /admin
