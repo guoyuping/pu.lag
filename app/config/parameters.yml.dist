@@ -13,3 +13,5 @@ parameters:
     mongodb_server: "mongodb://localhost:27017"
     admin_path: admin
     user_path: user
+    tpl_auto_include_renders_class: tpl_auto_include_renders_class
+    tpl_auto_include_forms_class: tpl_auto_include_forms_class
