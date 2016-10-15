@@ -92,10 +92,16 @@ class TplController extends Controller
 		$controller = $param['controller'];
 		$mods = $param['mods'];
 		$forms = array(); //去重后的，tpl里所有mod的controller名，用于自动插入的form页的模板
+		//不再预先插入render模板 2016-10-14
 		$mixed = array(); //去重后的，mix type下子mod需要自动插入的render页的模板（用来展示插入内容）
-		$this->getMods($mods,$forms,$mixed,0);
+		$pmods = array();
 
-		$response = $this->forward("TplBundle:$controller:render",array('mods'=>$forms,'mixs'=>$mixed));
+		//TODO
+		//让每个模块都保护模板信息
+		$this->getMods($tid,$mods,$pmods,$forms,$mixed,0);
+		$params = array('tpl'=>json_encode($tpl),'mods'=>$pmods,'forms'=>$forms);
+		print_r($tpl);
+		$response = $this->forward("TplBundle:$controller:render",array('params'=>$params));
 		return $response;
 	}
 	/**
@@ -103,22 +109,28 @@ class TplController extends Controller
 	 * 获取tpl中form页和需要预插入的mix下的render页
 	 * $flag = 1 是mix子模块，= 0是独立模块
 	 */
-	private function getMods($mods,&$forms,&$mixed,$flag=0)
+	private function getMods($tpl,$mods,&$pmods,&$forms,&$mixed,$flag=0)
 	{
 		foreach ($mods as $mod) {
-			
-			if (!in_array($mod['controller'],$forms)) {
-				$forms[] = $mod['controller'];
+			$mod['tpl'] = $tpl;
+			if (!array_key_exists($mod['controller'],$forms)) {
+				$forms[$mod['controller']] = $mod;
 			}
 			//如果是mixed里的子mod
 			if ($flag==1) {
 				if (!array_key_exists($mod['controller'],$mixed)) {
 					$mixed[$mod['controller']] = $mod;
 				}
+			}else{
+				$pmods[$mod['position']] = $mod;
 			}
 			if ($mod['type']=='mixed') {
-				$this->getMods($mod['mods'],$forms,$mixed,1);
+				$this->getMods($tpl,$mod['mods'],$pmods,$forms,$mixed,1);
 			}
 		}
 	}
+	// public function getSubModsAction(Request $request)
+	// {
+	// 	$t = $
+	// }
 }

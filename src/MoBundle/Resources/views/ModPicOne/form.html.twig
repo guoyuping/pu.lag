@@ -27,6 +27,21 @@
 </style>
 <script src="{{asset('js/html5-file-upload/jquery.html5-fileupload.js')}}"></script>
 <script type="text/javascript">
+	$(function () {
+		
+
+		// 
+		$('.mod-pic-one-render').on('click', function(event) {
+			event.preventDefault();
+			/* Act on the event */
+
+			//alert(h.html())
+			$('.mod-default-render').before($('.box .mod-pic-one-render').clone(true));
+			$('.mod-default-form').modal('hide');
+			$('.mod-pic-one-form').modal({ backdrop: 'static', keyboard: false });
+			});
+					
+	});
 	$('.image-upload, #dropbox').fileUpload(
 		{
 			url: './upload.json.php',

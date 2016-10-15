@@ -34,11 +34,24 @@
         </style>
     </head>
     <body>
+        {{dump(params.tpl)}}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-        <div class="{{tpl_include_mod_class}} hide">
-            {% block forms %}{% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript">
+
+            </script>
+        {% endblock %}
+{#         <div class="{{tpl_auto_include_renders_class}} hide">
+            {% for render in params.renders %}
+                {{render(controller('AppBundle:Mod:include',{mod: render, action: 'render'}))}}
+            {% endfor %}
+        </div> #}
+        <div class="{{tpl_auto_include_forms_class}}">
+            {% for key,form in params.forms %}
+                {% if key != "ModText" %}
+                {{render(controller('AppBundle:Mod:include',{mod: form, action: 'form'}))}}
+                {% endif %}
+            {% endfor %}
         </div>
-        
     </body>
 </html>

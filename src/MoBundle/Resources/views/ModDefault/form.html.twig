@@ -4,23 +4,50 @@
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <div class="list-btn-group">
-          <a href="#" class="list-btn-item insert-image">插入一张图片</a>
-          <a href="#" class="list-btn-item">插入一段文字</a>
-          <a href="#" class="list-btn-item">插入附件</a>
+          <a href="#" class="mod-pic-one-render">插入一张图片</a>
+          <a href="#" class="">插入一段文字</a>
+          <a href="#" class="">插入附件</a>
         </div>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <script>
+$(function () {
+    $('.mod-default-render').on('click', function(event) 
+      {
+        var btn = $(this);
+        //btn.id 是位置
+        if (btn.hasClass('mixed')) 
+        {
+          
+          
+          //提交 {{params.tpl}} 和 btn.id
+          //活动当前点击的mod的子模块
+          //遍历子模块动态生成点击列表
 
+          //生成 style class 
+          var a = "{{params.controller}}";
+          var b =a.replace(/([A-Z]+)/g,"-$1");
+          var slug =b.toLowerCase().substr(1);
+        }
+        event.preventDefault();
+        $('.mod-default-form').modal({ 
+          backdrop: 'static', 
+          keyboard: false 
+        });
+      });
+});
 </script>
 <style type="text/css">
-
-.list-btn-item:last-child {
+.list-btn-group { 
+  padding: 35px 0;
+  margin: 10px 0;
+}
+.list-btn-group a:last-child {
   margin-bottom: 0;
 }
-.list-btn-item {
+.list-btn-group a {
   position: relative;
   display: block;
   padding: 15px 15px;
@@ -30,17 +57,14 @@
   color: #333;
   text-decoration: none;
 }
-.list-btn-item:hover{ 
+.list-btn-group a:hover{ 
   background: #efefef; 
   text-decoration: none;
 }
-.list-btn-item:active{ 
+.list-btn-group a:active{ 
   background: #ddd; 
 }
-.list-btn-group { 
-  padding: 35px 0;
-  margin: 10px 0;
-}
+
 .mo-form .modal-body{  
   padding: 0;
 }

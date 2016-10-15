@@ -1,15 +1,17 @@
-{% extends 'Frontend/blank.html.twig' %}
+{% extends 'tpl.html.twig' %}
 {% block body %}
+	{{parent()}}
 	<div class="container-fluid tpl">
 		<div class="row">
 			<div class="tpl_default">
-				{{render(controller('MoBundle:ModDefault:render'))}}
+				{{render(controller('AppBundle:Mod:render',{mod: params.mods.p1}))}}
 			</div>
 		</div>
 	</div>
-	{{ include('TplBundle::TplDefault/forms.html.twig',{mods:mods,mixs:mixs})}}
 {% endblock %}
+
 {% block stylesheets %}
+	{{parent()}}
 	<style type="text/css">
 		.tpl { max-width: 700px; margin: 20px auto;}
 		.mod-body { margin-bottom: 15px; }
@@ -19,32 +21,14 @@
 		}
 	</style>
 {% endblock %}
-{% block javascripts %}
-	<script type="text/javascript">
-		$(function () {
-			
-			$('.mod-default-render .mod-body').on('click', function(event) 
-			{
-				event.preventDefault();
-				$('.mod-default-form').modal({ 
-					backdrop: 'static', 
-					keyboard: false 
-				});
-			});
-			// 
-			$('.insert-image').on('click', function(event) {
-				event.preventDefault();
-				/* Act on the event */
 
-				//alert(h.html())
-				$('.mod-default-render').before($('.box .mod-pic-one-render').clone(true));
-				$('.mod-default-form').modal('hide');
-				$('.mod-pic-one-form').modal({ backdrop: 'static', keyboard: false });
-				});
-						
-			});
-		var a = "ModPicOne";
-		var b =a.replace(/([A-Z]+)/g,"-$1");
-		var slug =b.toLowerCase().substr(1);
+{% block javascripts %}
+	{{parent()}}
+	{% javascripts '@TplBundle/Resources/public/js/*' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+	<script type="text/javascript">
+		
+		
 	</script>
 {% endblock %}

@@ -16,7 +16,7 @@
 			</tr>
 			{% for tpl in pagination %}
 				<tr>
-					<td>{{tpl.name}}</td>
+					<td><a href="{{path('tpl_show',{id:tpl.id})}}" target="_blank">{{tpl.name}}</a> </td>
 					<td>{{tpl.type}}</td>
 					<td>{{tpl.description}}</td>
 					<td><a href="{{path('tpl_edit',{'id':tpl.id})}}"><i class="fa fa-edit"></i>修改</a>&nbsp;<a href="javascript:;"><i class="fa fa-times-circle"></i>删除</a></td>

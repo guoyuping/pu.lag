@@ -43,6 +43,9 @@ twig:
     strict_variables: "%kernel.debug%"
     form_themes:
         - 'bootstrap_3_layout.html.twig'
+    globals:
+        tpl_auto_include_renders_class : "%tpl_auto_include_renders_class%"
+        tpl_auto_include_forms_class : "%tpl_auto_include_forms_class%"
     # paths:
         
 # Doctrine Configuration
@@ -96,5 +99,7 @@ knp_paginator:
 assetic:
     debug:          '%kernel.debug%'
     use_controller: '%kernel.debug%'
+    #bundles: ["TplBundle"]
+    #write_to: "%kernel.root_dir%/../web/foo"
     filters:
         cssrewrite: ~

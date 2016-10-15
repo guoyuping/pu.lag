@@ -8,19 +8,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ModPicOneController extends Controller
 {
-    public function renderAction(Request $request)
+    public function renderAction($params = null)
     {
-
         return $this->render('MoBundle:ModPicOne:render.html.twig', array(
-    		'position'=>$request->get('position'),
-            'param'=>$request->get('param')
+            'params'=>$params
         	));
     }
 
-    public function formAction(Request $request)
+    public function formAction($params = null)
     {
         return $this->render('MoBundle:ModPicOne:form.html.twig',array(
-            'param'=>$request->get('param')
+            'params'=>$params
             ));
     }
 }

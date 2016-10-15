@@ -8,16 +8,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ModDefaultController extends Controller
 {
-    public function renderAction(Request $request)
+    public function renderAction($params = null)
     {
         return $this->render('MoBundle:ModDefault:render.html.twig', array(
-    		'position'=>$request->get('position'),
-
+    		'params'=>$params
         	));
     }
 
-    public function formAction()
+    public function formAction($params = null)
     {
-        return $this->render('MoBundle:ModDefault:form.html.twig',array('name'=>'MoPicOne'));
+        return $this->render('MoBundle:ModDefault:form.html.twig',array(
+            'params'=>$params
+            ));
     }
 }

@@ -3,14 +3,12 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-test_render:
-    path:     /render
-    defaults: { _controller: ModsetMoPicOneBundle:Mod:form}
-tpl:
+
+tpl_show:
     path:     /tpl/{id}
     defaults: { _controller: AppBundle:Tpl:render}
     requirements:
-        id: '\d+'
+        id: '[0-9A-Za-z]+'
 test_mod:
     path:     /mod/{mod}/{action}
     defaults: { _controller: AppBundle:Mod:render}
@@ -71,6 +69,9 @@ tpl_show:
     defaults: { _controller: AppBundle:Tpl:render }
     requirements:
         id: '[0-9A-Za-z]+'
+# tpl_sub_mods:
+#     path:     /tpl/sub/mods
+#     defaults: { _controller: AppBundle:Tpl:getSubMods }
 #/
 admin_home:
     path:     /admin

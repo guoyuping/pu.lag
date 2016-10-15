@@ -80,38 +80,60 @@ class ModController extends Controller
 			10);
 		return $this->render('Mod/list.html.twig',['pagination'=>$pagination]);
 	}
-
+	/**
+	 * 解决tpl 自动include模块的问题
+	 */
+	public function includeAction(Request $request)
+	{
+		$dm = $this->get('doctrine_mongodb')->getManager();
+		$mod = $request->get('mod');
+		$action = $request->get('action');
+		if ($action == "form") {
+			/*
+			array:8 [▼
+			    "controller" => "ModDefault"
+			    "title" => "添加"
+			    "position" => "p1"
+			    "width" => 700
+			    "height" => 200
+			    "type" => "mixed"
+			    "mods" => array:1 [▶]
+			    "tpl" => "TplDefault"
+			  ]
+			*/
+		}
+		if ($action == "render") {
+			/*
+			var_dump(mod)
+			array:4 [▼
+			  "controller" => "ModPicOne"
+			  "width" => 700
+			  "height" => 200
+			  "type" => "standalone"
+			]
+			*/
+		}
+		$controller = $mod['controller'];
+		if (!$mod || !$action) {
+			throw new \Exception("Error: AppBundle:Mod:render, \"$controller\" 模块不存在！", 1);
+		}
+		return $this->forward("MoBundle:$controller:$action",array('params'=>$mod));
+		 
+	}
 	public function renderAction(Request $request)
 	{
 
 		$dm = $this->get('doctrine_mongodb')->getManager();
 		$mod = $request->get('mod');
-		$action = $request->get('action');
-		$param = "";
-		if ($action == "form") {
-			$controller = $mod;
-		}
-		if ($action == "render") {
-			// var_dump(mod)
-			// array:4 [▼
-			//   "controller" => "ModPicOne"
-			//   "width" => 700
-			//   "height" => 200
-			//   "type" => "standalone"
-			// ]
-			$controller = $mod['controller'];
-			$param = $mod;
-		}
+		$action = $request->get('action','render');//没有action默认为render
+		$controller = $mod['controller'];
+
 
 
 		if (!$mod || !$action) {
 			throw new \Exception("Error: AppBundle:Mod:render, \"$controller\" 模块不存在！", 1);
 		}
-		
-		
-		//$mod = $dm->getRepository('AppBundle:Mod')->findOneBy(array('param.controller'=>$controller));
-
-		$response = $this->forward("MoBundle:$controller:$action",array('param'=>$param));
+		$response = $this->forward("MoBundle:$controller:$action",array('params'=>$mod));
 		return $response;
 	}
 
