@@ -4,9 +4,7 @@
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <div class="list-btn-group">
-          <a href="#" class="mod-pic-one-render">插入一张图片</a>
-          <a href="#" class="">插入一段文字</a>
-          <a href="#" class="">插入附件</a>
+
         </div>
       </div>
     </div><!-- /.modal-content -->
@@ -21,12 +19,11 @@ $(function () {
         //btn.id 是位置
         if (btn.hasClass('mixed')) 
         {
-
           $.ajax({
             url: '{{path("tpl_sub_mods")}}',
             type: 'get',
             dataType: 'json',
-            data: {id: "{{params.tpl}}", pos: btn.attr('id')}
+            data: {id: "{{params.tpl}}", pos: this.id}
           })
           .done(function(data) {
             if (data.success) {
@@ -54,7 +51,7 @@ $(function () {
 });
 function renderMods(mods) {
   var a = $('.mod-default-form .list-btn-group');
-  a.html('');
+  a.html(null);
   for (var key in mods) {
     var mod = mods[key];
     $('<a href>').addClass(generateClass(mod.controller)).text(mod.title).appendTo(a);
