@@ -32,7 +32,8 @@
         "doctrine/mongodb-odm-bundle": "~3.0",
         "knplabs/knp-paginator-bundle": "^2.5",
         "symfony/assetic-bundle": "^2.8",
-        "jms/serializer-bundle": "^1.1"
+        "jms/serializer-bundle": "^1.1",
+        "liip/imagine-bundle": "^1.6"
 
     },
     "require-dev": {

@@ -19,22 +19,22 @@ registration:
     path:     /register
     defaults: { _controller: AppBundle:User/Account:register}
 user_new:
-    path:     /%admin_path%/user/new
+    path:     /user/new
     defaults: { _controller: AppBundle:User/Account:new}
 user_edit:
-    path:     /%admin_path%/user/edit
+    path:     /user/edit
     defaults: { _controller: AppBundle:User/Account:edit}
 user_list:
-    path:     /%admin_path%/user/list
+    path:     /user/list
     defaults: { _controller: AppBundle:User/Account:list}
 login:
     path:     /login
     defaults: { _controller: AppBundle:User/Login:login}
 role_new:
-    path:     /%admin_path%/role/new
+    path:     /role/new
     defaults: { _controller: AppBundle:User/Role:new}
 role_list:
-    path:     /%admin_path%/role/list
+    path:     /role/list
     defaults: { _controller: AppBundle:User/Role:list}
 login_check:
     path:     /security_check
